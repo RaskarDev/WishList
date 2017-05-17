@@ -56,7 +56,7 @@ export class AgregarComponent implements OnInit {
         let lista: Lista = new Lista(this.nombreLista);
         lista.items = this.items;
 
-        this.wishList.listas.push(lista);
+        this.wishList.agregarLista(lista);
 
         this.navCtrl.pop();
 
