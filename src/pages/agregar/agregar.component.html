@@ -19,7 +19,7 @@
         <ion-input (keyup.enter)="agregar()" [(ngModel)]="nombreItem" type="text"></ion-input>
       </ion-item>
 
-      <button ion-button>Agregar</button>
+      <button ion-button (click)="agregar()">Agregar</button>
 
     </ion-card-content>
   </ion-card>
@@ -37,7 +37,7 @@
             {{item.nombre}}
           </button>
           <button ion-button outline item-right color="danger" (click)="borrar(i)">
-            <ion-icon ios="ios-trash" md="md-trash" ></ion-icon>
+            <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
             Borrar Item ({{i}})
           </button>
         </ion-item>

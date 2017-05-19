@@ -6,7 +6,16 @@
 
 <ion-content padding>
 
-  <ion-card *ngFor="let lista of _wishList.listas; let i = index;">
+  <ion-grid *ngIf="(_wishList.listas | pendientes).length === 0">
+    <ion-row>
+      <ion-col class="text-center caja-vacia">
+        <ion-icon class="icono-grande" ios="ios-sunny" md="md-sunny"></ion-icon>
+        <p>No hay ninguna lista creada</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card *ngFor="let lista of _wishList.listas | pendientes; let i = index;">
     <ion-item color="dark" (click)="verDetalle(lista, i)">
       <h2>{{lista.nombre}}</h2>
       <ion-note item-right>{{lista.items.length}} items</ion-note>

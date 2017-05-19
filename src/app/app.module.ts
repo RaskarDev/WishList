@@ -1,4 +1,3 @@
-
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -9,6 +8,7 @@ import { WishListService } from './services/wish-list.service';
 
 //Pipes
 import { PlaceholderPipe } from './pipes/placeholder.pipe';
+import { PendientesPipe } from './pipes/pendientes.pipe';
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { PendientesComponent } from '../pages/pendientes/pendientes.component';
@@ -25,8 +25,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PendientesComponent,
     TerminadosComponent,
     AgregarComponent,
+    DetalleComponent,
     PlaceholderPipe,
-    DetalleComponent
+    PendientesPipe
   ],
   imports: [
     BrowserModule,
